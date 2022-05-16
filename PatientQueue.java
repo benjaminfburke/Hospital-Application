@@ -6,7 +6,6 @@ public class PatientQueue {
     //constructor: set variables
     //capacity = initial capacity of array 
     public PatientQueue(int capacity) {
-	//TO BE COMPLETED
         this.capacity = capacity;
         this.array = new Patient[capacity];
     }
@@ -80,7 +79,7 @@ public class PatientQueue {
     //return the final index at which the patient is stored
     //return -1 if the patient could not be inserted
     public int insert(Patient p) {
-	//TO BE COMPLETED
+	
         if (size == capacity) {
             return -1;
         }
@@ -100,7 +99,7 @@ public class PatientQueue {
     //if there are multiple patients with the same urgency level,
     //return the one who arrived first
     public Patient delMax() {
-	//TO BE COMPLETED
+	
         if (size == 0) {
             return null;
         }
@@ -113,7 +112,7 @@ public class PatientQueue {
 
     //return but do not remove the first patient in the queue
     public Patient getMax() {
-	//TO BE COMPLETED
+	
         if (isEmpty()) {
             return null;
         }
@@ -122,13 +121,13 @@ public class PatientQueue {
 
     //return the number of patients currently in the queue
     public int size() {
-	//TO BE COMPLETED
+	
         return size;
     }
 
     //return true if the queue is empty; false else
     public boolean isEmpty() {
-	//TO BE COMPLETED
+	
         if (size() == 0) {
             return true;
         }
