@@ -7,7 +7,7 @@ public class PHashtable {
     //set the table size to the first 
     //prime number p >= capacity
     public PHashtable (int capacity) {
-	//TO BE COMPLETED
+	
         cap = capacity;
         if (!isPrime(cap)) {
             cap = getNextPrime(cap);
@@ -18,7 +18,7 @@ public class PHashtable {
     //return the Patient with the given name 
     //or null if the Patient is not in the table
     public Patient get(String name) {
-	//TO BE COMPLETED
+	
         Patient temp;
         for (int i = 0; i < table.length; i++) {
             if(table[i] != null) {
@@ -35,7 +35,7 @@ public class PHashtable {
 
     //put Patient p into the table
     public void put(Patient p) {
-	//TO BE COMPLETED
+	
         int hash;
         if (p.name().hashCode() % cap < 0) {
             hash = p.name().hashCode() % cap;
@@ -60,7 +60,7 @@ public class PHashtable {
     //from the table
     //return null if Patient doesn't exist
     public Patient remove(String name) {
-	//TO BE COMPLETED
+	
         Patient temp;
         for (int i = 0; i < table.length; i++) {
             if(table[i] != null) {
@@ -79,7 +79,7 @@ public class PHashtable {
 
     //return the number of Patients in the table
     public int size() {
-	//TO BE COMPLETED
+	
         return size;
     }
 
