@@ -5,12 +5,11 @@ public class NewPatientQueue {
     private PHashtable pHashtable;
     //private PHashtable table;
 
-    /*TO BE COMPLETED IN PART 1*/
 
     //constructor: set variables
     //capacity = initial capacity of array 
     public NewPatientQueue(int capacity) {
-	//TO BE COMPLETED
+	
         this.capacity = capacity;
         this.array = new Patient[capacity];
         pHashtable = new PHashtable(capacity);
@@ -87,7 +86,7 @@ public class NewPatientQueue {
     //return the final index at which the patient is stored
     //return -1 if the patient could not be inserted
     public int insert(Patient p) {
-        //TO BE COMPLETED
+        
         if (size == capacity) {
             return -1;
         }
@@ -109,7 +108,7 @@ public class NewPatientQueue {
     //if there are multiple patients with the same urgency level,
     //return the one who arrived first
     public Patient delMax() {
-        //TO BE COMPLETED
+        
         if (size == 0) {
             return null;
         }
@@ -138,7 +137,7 @@ public class NewPatientQueue {
 
     //return but do not remove the first patient in the queue
     public Patient getMax() {
-        //TO BE COMPLETED
+        
         if (isEmpty()) {
             return null;
         }
@@ -147,13 +146,13 @@ public class NewPatientQueue {
 
     //return the number of patients currently in the queue
     public int size() {
-        //TO BE COMPLETED
+        
         return size;
     }
 
     //return true if the queue is empty; false else
     public boolean isEmpty() {
-        //TO BE COMPLETED
+        
         if (size() == 0) {
             return true;
         }
@@ -166,13 +165,12 @@ public class NewPatientQueue {
 	return array;
     }
 
-    /*TO BE COMPLETED IN PART 2*/
 
     //remove and return the Patient with
     //name s from the queue
     //return null if the Patient isn't in the queue
     public Patient remove(String s) {
-	//TO BE COMPLETED
+	
         int prev;
         Patient temp = pHashtable.get(s);
         prev = temp.posInQueue();
@@ -196,7 +194,7 @@ public class NewPatientQueue {
     //update the emergency level of the Patient
     //with name s to urgency
     public void update(String s, int urgency) {
-	//TO BE COMPLETED
+	
         Patient temp = pHashtable.get(s);
         pHashtable.remove(s);
         temp.setUrgency(urgency);
