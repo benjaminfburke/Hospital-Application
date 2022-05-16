@@ -8,7 +8,6 @@ public class Clinic {
     private int walkedOut = 0;
 
     public Clinic(int cap, int er_threshold) {
-	//TO BE COMPLETED
         this.capacity = cap;
         this.pq = new NewPatientQueue(capacity);
         this.er_threshold = er_threshold;
@@ -34,7 +33,7 @@ public class Clinic {
      *of the max patient
      */
     public String process(String name, int urgency) {
-	//TO BE COMPLETED
+	
         Patient temp = new Patient(name, urgency, 0);
 	    processed++;
 	    if (urgency > er_threshold) {
@@ -61,7 +60,7 @@ public class Clinic {
      *highest urgency to be seen; return the name
      *of the Patient or null if the queue is empty*/
     public String seeNext() {
-	//TO BE COMPLETED
+	
         Patient temp = pq.getMax();
         seeDoctor(temp);
         return pq.delMax().name();
@@ -74,7 +73,7 @@ public class Clinic {
      *return true if the Patient is removed from the queue
      *and false otherwise*/
     public boolean handle_emergency(String name, int urgency) {
-	//TO BE COMPLETED
+	
         if (urgency > er_threshold) {
             pq.update(name, urgency);
             sendToER(pq.remove(name));
@@ -87,7 +86,7 @@ public class Clinic {
     /*Patient decides to walk out
      *remove them from the queue*/
     public void walk_out(String name) {
-	//TO BE COMPLETED
+	
         pq.remove(name);
 	    walkedOut++;
     }
